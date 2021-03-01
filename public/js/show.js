@@ -1,4 +1,5 @@
 function showWork() {
+  // show hidden elements if display is none, else hide elements
   var fid = document.getElementById("fidelidade");
   if (fid.style.display === "none") {
     fid.style.display = "block";
@@ -15,6 +16,7 @@ function showWork() {
 
 
 function showProject() {
+  // show hidden elements if display is none, else hide elements
   var bullet = document.getElementById("bulletGame");
   if (bullet.style.display === "none") {
     bullet.style.display = "block";
