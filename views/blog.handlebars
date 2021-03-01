@@ -1,0 +1,35 @@
+<div class="header">
+  <h2>Scott's blog</h2>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    {{#each blogList}}
+    <div class="card">
+      <h2>{{this.title}}</h2>
+      <h5>{{this.value.description}}</h5>
+      <p>{{this.value.blog}}</p>
+    </div>
+    {{/each}}
+  </div>
+  <div class="rightcolumn">
+    <div class="card" style="height:100px; text-align:center;">
+      <button class="showButton" onclick = "redirect()" style="float:none;">Write Blog</button>
+    </div>
+    <div class="card" style="height:300px; overflow:auto;">
+      <h3>Popular Post</h3>
+      {{#each blogList}}
+      
+      <div class="blogside">{{this.title}}</div>
+      <ul>
+        <li>{{this.value.description}}</li>
+      </ul>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<div class="bfooter">
+  <a class = "socialLink" href="#top">Back to top</a>
+</div>
+
+<script type="text/javascript" src="http://localhost:30243/blogscript"></script>

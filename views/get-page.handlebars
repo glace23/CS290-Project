@@ -1,0 +1,16 @@
+<h1 style="color:white;">GET Request Recevied</h1>
+
+<table class = "show">
+<p class = "show"> Comments Table</p>
+ <tr>
+    <th> Name </th>
+    <th> Value</th>
+ </tr>
+  {{#each dataList}}
+ <tr>
+    <td>{{this.name}}
+    <td>{{this.value}}
+ </tr>
+  {{/each}}
+
+</table>

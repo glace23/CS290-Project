@@ -1,0 +1,58 @@
+<div class = "comments">
+    <div class="card" style="border:solid; color:#b5656d;">
+      <p class = "show" style="color:black">You can contact me at <a style="color:#b5656d; text-decoration:underline;" href="mailto:lisco@oregonstate.edu">lisco@oregonstate.edu</a></p>
+      <br>
+    </div>
+
+    <div class = "direct">
+      <p class = "show">You can also contact me via the form below!
+        <form id = directForm action = "http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method = "post">
+          <fieldset>
+          <label class="show" for="name">Your name:
+              <input type="text" name="name" id=name>
+          </label>
+          <br>
+          <br>
+          <label class="show" for="message">
+              <textarea name="message" id=message cols="80" rows="10"></textarea>
+          </label>
+          <br>
+          <br>
+          <input type="submit" id="messageSubmit" class="submit">
+        </fieldset>
+        </form>
+    </div>
+
+    <div class = "comments">
+      <p class = "cm">Comments:</p>
+      <div>
+        <table class = "show">
+        {{#each dataList}}
+        <tr>
+          <td style="width: 500px">{{this.name}}
+          <td>{{this.value}}
+        </tr>
+        {{/each}}
+        </table>
+      </div>
+
+      <form id = commentForm  onSubmit="return redirect()">
+      <fieldset>
+        <legend class="show">Leave a comment!</legend>
+        <label class="show" for="username">Your name:
+            <input type="text" name="username" id="username">
+        </label>
+        <br>
+        <br>
+        <label class="show" for="comment">
+            <textarea name="comment" id="comment" cols="80" rows="10"></textarea>
+        </label>
+        <br>
+        <br>
+        <input type="submit" id="commentSubmit" class="submit">
+      </fieldset>
+      </form>
+    </div>
+</div>
+
+ <script type="text/javascript" src="http://localhost:30243/commentscript"></script>
