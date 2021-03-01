@@ -6,7 +6,7 @@ var path = require('path')
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 30243);
+app.set('port', 30244);
 
 // post
 var bodyParser = require('body-parser');
