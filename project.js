@@ -6,7 +6,7 @@ var path = require('path')
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 30244);
+app.set('port', 3000);
 
 // post
 var bodyParser = require('body-parser');
@@ -145,6 +145,14 @@ app.get('/commentscript', function(req, res){
         root: path.join(__dirname + "/public/js") 
     }; 
     res.sendFile("comment.js", options);
+});
+
+
+app.get('/commentjson', function(req, res){
+    var options = { 
+        root: path.join(__dirname + "/public/json") 
+    }; 
+    res.sendFile("comment.json", options);
 });
 
 
