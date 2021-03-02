@@ -147,15 +147,6 @@ app.get('/commentscript', function(req, res){
     res.sendFile("comment.js", options);
 });
 
-
-app.get('/commentjson', function(req, res){
-    var options = { 
-        root: path.join(__dirname + "/public/json") 
-    }; 
-    res.sendFile("comment.json", options);
-});
-
-
 var commentData = []
 
 app.get('/contact',function(req,res){
